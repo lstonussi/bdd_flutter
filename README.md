@@ -1,6 +1,6 @@
 # example_bdd
 
-Project to demonstrate the use of BDD 
+Project to demonstrate BDD use
 
 ## Getting Started
 
