@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),
-      home: MyHomePage(title: 'Exemple DBB'),
+      home: MyHomePage(title: 'Exemple BDD'),
     );
   }
 }

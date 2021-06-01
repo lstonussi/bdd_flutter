@@ -39,6 +39,17 @@ class TapButtonNTimesStep extends When2WithWorld<String, int, FlutterWorld> {
   }
 }
 
+class TapButtonStep extends When1WithWorld<String, FlutterWorld> {
+  @override
+  RegExp get pattern => RegExp(r"I tap the {string} button");
+
+  @override
+  Future<void> executeStep(String buttonKey) async {
+    final locator = find.byValueKey(buttonKey);
+    await FlutterDriverUtils.tap(world.driver, locator, timeout: timeout);
+  }
+}
+
 class GivenCounterIsSetTo extends Given1WithWorld<String, FlutterWorld> {
   @override
   RegExp get pattern => RegExp(r"I expect the counter to be {string}");
