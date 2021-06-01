@@ -15,6 +15,7 @@ Future<void> main() {
     ]
     ..stepDefinitions = [
       CheckGivenWidgets(),
+      CheckGivenOneWidgets(),
       ExpectFound(),
       TapButtonNTimesStep(),
       TapButtonStep(),

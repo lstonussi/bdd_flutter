@@ -26,6 +26,20 @@ class CheckGivenWidgets
   RegExp get pattern => RegExp(r"I have {string} and {string} and {string}");
 }
 
+class CheckGivenOneWidgets extends Given1WithWorld<String, FlutterWorld> {
+  @override
+  Future<void> executeStep(String input1) async {
+    final widget1 = find.byValueKey(input1);
+    bool widget1Exists =
+        await FlutterDriverUtils.isPresent(world.driver, widget1);
+
+    expect(widget1Exists, true);
+  }
+
+  @override
+  RegExp get pattern => RegExp(r"I have {string}");
+}
+
 class TapButtonNTimesStep extends When2WithWorld<String, int, FlutterWorld> {
   @override
   RegExp get pattern => RegExp(r"I tap the {string} button {int} time(?:s|)");
