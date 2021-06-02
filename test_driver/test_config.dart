@@ -14,8 +14,8 @@ Future<void> main() {
       JsonReporter(path: './report.json')
     ]
     ..stepDefinitions = [
-      CheckGivenWidgets(),
-      CheckGivenOneWidgets(),
+      CheckWidgets(),
+      CheckOneWidget(),
       ExpectFound(),
       TapButtonNTimesStep(),
       TapButtonStep(),

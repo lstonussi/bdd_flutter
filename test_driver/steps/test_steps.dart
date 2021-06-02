@@ -2,7 +2,7 @@ import 'package:flutter_driver/flutter_driver.dart';
 import 'package:flutter_gherkin/flutter_gherkin.dart';
 import 'package:gherkin/gherkin.dart';
 
-class CheckGivenWidgets
+class CheckWidgets
     extends Given3WithWorld<String, String, String, FlutterWorld> {
   @override
   Future<void> executeStep(String input1, String input2, String input3) async {
@@ -26,7 +26,7 @@ class CheckGivenWidgets
   RegExp get pattern => RegExp(r"I have {string} and {string} and {string}");
 }
 
-class CheckGivenOneWidgets extends Given1WithWorld<String, FlutterWorld> {
+class CheckOneWidget extends Given1WithWorld<String, FlutterWorld> {
   @override
   Future<void> executeStep(String input1) async {
     final widget1 = find.byValueKey(input1);
